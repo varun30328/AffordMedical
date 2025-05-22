@@ -1,0 +1,128 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background-color: #f4f7f6;
+  color: #333;
+}
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.dashboard-header {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.dashboard-main {
+  display: flex;
+  flex: 1;
+  padding: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.dashboard-left-panel,
+.dashboard-right-panel {
+  flex: 1;
+  min-width: 300px;
+}
+
+.dashboard-left-panel {
+  flex-basis: 30%;
+  max-width: 400px;
+}
+
+.dashboard-right-panel {
+  flex-basis: 65%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  color: #2c3e50;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.3em;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.positive {
+  color: #27ae60;
+  font-weight: bold;
+}
+
+.negative {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.dashboard-footer {
+  background-color: #2c3e50;
+  color: #aaa;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.8em;
+}
+
+@media (max-width: 768px) {
+  .dashboard-main {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .dashboard-left-panel,
+  .dashboard-right-panel {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+.stock-selector-card {
+  margin-bottom: 20px;
+}
+
+.stock-selector-card h2 {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.stock-select-dropdown {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+  font-size: 1em;
+  color: #333;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13.6-6.4H18.4c-5%200-9.3%201.8-12.9%205.4-3.5%203.6-5.4%207.9-5.4%2012.9%200%205%201.8%209.3%205.4%2012.9l128%20127.9c3.5%203.5%207.8%205.4%2012.8%205.4s9.4-1.9%2012.9-5.4l128-127.9c3.6-3.5%205.4-7.8%205.4-12.8-.1-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.stock-select-dropdown:focus {
+  border-color: #1890ff;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}

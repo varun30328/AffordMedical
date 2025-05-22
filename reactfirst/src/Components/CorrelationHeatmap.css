@@ -1,0 +1,66 @@
+.heatmap-container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.heatmap-container h2 {
+  color: #2c3e50;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.3em;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.heatmap-grid {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.heatmap-header-row,
+.heatmap-row {
+  display: table-row;
+}
+
+.heatmap-cell {
+  display: table-cell;
+  border: 1px solid #eee;
+  padding: 8px;
+  text-align: center;
+  font-size: 0.85em;
+  white-space: nowrap;
+  vertical-align: middle;
+  min-width: 50px;
+}
+
+.heatmap-cell.header-label {
+  font-weight: bold;
+  background-color: #f2f2f2;
+  color: #555;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.heatmap-cell.header-label.corner {
+  background-color: #e0e0e0;
+  z-index: 2;
+}
+
+.heatmap-cell.header-label.y-label {
+  position: sticky;
+  left: 0;
+  background-color: #f2f2f2;
+  z-index: 1;
+}
+
+.heatmap-cell:not(.header-label) {
+  width: 1%;
+}
